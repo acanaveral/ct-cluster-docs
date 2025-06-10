@@ -43,7 +43,7 @@ python my_script.py
 First step is to establish contact with our bastion server through SSH:
 
 ```bash
-ssh -p 5555 dummyuser@123.456.789.012
+ssh -p xxxx dummyuser@123.456.789.012
 ```
 
 ## 3. Transfer your files
@@ -51,7 +51,7 @@ ssh -p 5555 dummyuser@123.456.789.012
 Use `scp` to copy your files to the cluster:
 
 ```bash
-scp -P 5555 my_script.py job.slurm dummyuser@123.456.789.012:~/
+scp -P xxxx my_script.py job.slurm dummyuser@123.456.789.012:~/home/$USER
 ```
 
 ## 4. Submit your job
@@ -73,8 +73,6 @@ squeue -u $USER
 # View detailed information about a specific job
 scontrol show job <jobid>
 
-# View job efficiency after completion
-seff <jobid>
 ```
 
 ## 6. Check results
